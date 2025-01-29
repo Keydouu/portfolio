@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Youness Chetouan</title>
+    <link rel="stylesheet" href="./style_main.css">
+    <link rel="stylesheet" href="./mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav" style="position: fixed; top: 0; width: 100%; z-index: 1000; background-color: white; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); height: 10vh; ">
+      <!--div class="logo">Youness Chetouan</div-->
+      <div>
+        <ul class="nav-links">
+          <li><a href="#profile">Home</a></li>
+          <li><a href="#about">Introduction</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experiences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Youness Chetouan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#about" onclick="toggleMenu()">Introduction</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experiences</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <section id="profile">
+        <div class="section__pic-container">
+          <img src="./assets/images/mee.png" alt="My beautiful face :^)" style="border-radius: 50%; background-color: beige;">
+        </div>
+        <div></div>
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Youness Chetouan</h1>
+          <p class="section__text__p2">Full-Stack Developer</p>
+          
+          <div class="btn-container">
+            <button class="btn btn-color-1" onclick="window.open('assets/documents/CV_Fullstack_Chetouan_youness.pdf')">
+              Download CV
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+              Send message
+            </button>
+          </div>
+          <div id="socials-container">
+            <img src="./assets/icons/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://www.linkedin.com/in/youness-chetouan/'">
+            <img src="./assets/icons/github.png" alt="Github" class="icon" onclick="location.href='https://github.com/Keydouu'">
+            <img src="./assets/icons/email.png" alt="Email icon" class="icon contact-icon email-icon" onclick="location.href='youness.chetouan9@gmail.com'">
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="about">
+      <h1 class="title">Introduction</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="assets/images/map.png" alt="internships_map" class="about-pic" style="height: 100%;">
+        </div>
+        <div class="about-details-container">
+
+          <div class="about-containers">
+            <div class="details-container">
+              <!--img src="./assets/experience.png" alt="Experience icon" class="icon"aaaaaa-->
+              <h3>Stages</h3>
+              <table class="invisible-table">
+                <tr>
+                    <td>2024</td>
+                    <td>| 6 mois</td>
+                    <td style="text-align: left;">| Berger-Levrault</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>| 6 mois</td>
+                    <td>| Eurafrique Information</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>| 6 mois</td>
+                    <td style="text-align: left;">| NTT DATA</td>
+                </tr>
+            </table>
+            </div>
+
+            <div class="details-container">
+              <!--img src="./assets/education.png" alt="Education icon" class="icon"-->
+              <h3>Education</h3>
+              <table class="invisible-table">
+                <tr>
+                    <td>2024</td>
+                    <td>Master</td>
+                    <td>Intelligence Artificielle</td>
+                    <td style="text-align: left;">Université d'Artois</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Master</td>
+                    <td style="text-align: left;">Development</td>
+                    <td style="text-align: left;">ENSA</td>
+                </tr>
+            </table>
+            </div>
+          </div>
+
+          <div class="text-container">
+            <p>
+                Hello, I'm <b>Youness</b>, a passionate and dedicated Web Developer.
+            </p>
+            <p>Développeur passionné avec une expérience en création d'applications web et desktop.
+              <br>Spécialisé en backend avec Java et Spring Boot, je conçois des solutions performantes, sécurisées et évolutives.</p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/icons/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'">
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Frontend Development -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container" id="frontend-experience">
+              <!-- JavaScript will populate this section -->
+            </div>
+          </div>
+    
+          <!-- Backend Development -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container" id="backend-experience">
+              <!-- JavaScript will populate this section -->
+            </div>
+          </div>
+    
+          <!-- AI Development -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">AI Skills</h2>
+            <div class="article-container" id="ai-experience">
+              <!-- JavaScript will populate this section -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/icons/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'">
+    </section>
+    
+    
+
+
+
+
+    <!--section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/1.PNG" alt="Project 1" class="project-img">
+            </div>
+            <h2 class="experience-sub-title project-title">Management System for Training Center</h2>
+            <p>
+              A comprehensive management system for a training center developed using Laravel, HTML, CSS, JavaScript, and Bootstrap, enabling efficient handling of administrative tasks and data management.</p>
+            <div class="btn-container">
+       
+              <button class="btn btn-color-2 project-btn" onclick="location.href=''">
+                Website
+              </button>
+            
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/f.jpg" alt="Project 2" class="project-img">
+            </div>
+            <h2 class="experience-sub-title project-title">Complete PHP MYSQL Blog Website</h2>
+            <p>
+              
+              A complete PHP-based dynamic blog website that allows users to create, manage, and view blog posts, with features like categories, comments.</p>
+  
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='Website'">
+                Website
+              </button>
+             
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/t.jpg" alt="Project 3" class="project-img">
+            </div>
+            <h2 class="experience-sub-title project-title">Responsive Travel Website - REACTJS</h2>
+            <p>A responsive travel website built with ReactJS, offering a seamless and interactive experience across various devices for browsing travel destinations and services.
+            </p>
+      <br>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/akramcazanegra/Responsive_Travel_-REACTJS'">
+                Website
+              </button>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/icons/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'">
+    </section>
+    <section id="contact">
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+          <p><a href="youness.chetouan9@gmail.com">youness.chetouan9@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">10rem
+          <img src="./assets/icons/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
+          <p><a href="https://www.linkedin.com/in/youness-chetouan/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section-->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Explore 🌍, Create ✨, Achieve 💻</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
