@@ -18,11 +18,11 @@
         if (in_array($page, $allowed_pages)) {
             include "$page.php";
         } else {
-            echo "Page not found!";
+            include "Home.php";
         }
     ?>
     <footer>
-      <!--nav>
+      <!--nav>aaa
         <div class="nav-links-container">
           <ul class="nav-linka&&&zaas">
             <?php
@@ -36,7 +36,6 @@
       </nav-->
       <p>Explore 🌍, Create ✨, Achieve 💻</p>
     </footer>
-    <script src="data.js"></script>
     <script src="script.js"></script>
 <!--a-->
 </body>

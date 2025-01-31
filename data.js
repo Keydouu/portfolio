@@ -19,14 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
       "java.png", "python.png", "mysql.png", "aws.png"
     ];
   
-    const aiIcons = [
-      "ml.png", "deep_learning.png", "nlp.png"
-    ];
-  
     // Get containers for frontend, backend, and AI sections
     const frontendContainer = document.getElementById('frontend-experience');
     const backendContainer = document.getElementById('backend-experience');
-    const aiContainer = document.getElementById('ai-experience');
   
     // Function to create and append skill articles
     function populateSkills(skills, icons, container) {

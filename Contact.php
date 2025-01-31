@@ -1,7 +1,10 @@
 <section id="contact"></br></br>
+
 <?php
     session_start();
 
+    $alertmsg = "none";
+    
     $conn = new mysqli("localhost", "root", "Sudo516225", "porfolio");
 
     if ($conn->connect_error) {
@@ -23,22 +26,28 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["vote"])) {
+        
         if (!isset($_SESSION["voted"])) {
             $_SESSION["voted"] = $_POST["vote"];
-            $voteType = ($_POST["vote"] == "yes") ? "yes_votes" : "no_votes";
+            if($_POST["vote"] == "yes"){
+                $voteType ="yes_votes";
+                $alertmsg = "voted-yes";
+            } else {
+                $voteType = "no_votes";
+                $alertmsg = "voted-no";
+            }
             $conn->query("UPDATE poll SET $voteType = $voteType + 1 WHERE id = 1");
-            echo '<div class="alert alert-success">Vote submitted!</div>';
         } else if($_SESSION["voted"]!=$_POST["vote"]) {
             $_SESSION["voted"] = $_POST["vote"];
             if ($_POST["vote"] == "yes"){
                 $conn->query("UPDATE poll SET yes_votes = yes_votes + 1, no_votes = no_votes - 1 WHERE id = 1");
-                echo '<div class="alert alert-success">Vote updated ! Wise choice !</div>';
+                $alertmsg = "updated";
             }else if ($_POST["vote"] == "no"){
                 $conn->query("UPDATE poll SET no_votes = no_votes + 1, yes_votes = yes_votes - 1 WHERE id = 1");
-                echo '<div class="alert alert-danger">I hate your guts >:(</div>';
+                $alertmsg = "voted-no";
             }
         } else {
-            echo '<div class="alert alert-danger">You already voted!</div>';
+            $alertmsg = "voted-again";
         }
     }
 
@@ -54,12 +63,29 @@
     $conn->close();
 ?>
 
+<div class="alert" <?php if($alertmsg != "voted-no") echo 'style="display: none;"'; ?> id="voted-no">
+  <span class="closebtn">&times;</span>  
+  <strong>I hate your guts </strong> but at least you got some skills.
+</div>
+<div class="alert success" <?php if($alertmsg != "voted-yes") echo 'style="display: none;"'; ?> id="voted-yes">
+  <span class="closebtn">&times;</span> 
+  <strong>Vote submitted !</strong> thank you for voting.
+</div>
+<div class="alert success" <?php if($alertmsg != "updated") echo 'style="display: none;"'; ?> id="updated">
+  <span class="closebtn">&times;</span> 
+  <strong>Vote updated ! </strong> Wise choice !
+</div>
+
+<div class="alert info" <?php if($alertmsg != "voted-again") echo 'style="display: none;"'; ?> id="voted-again">
+  <span class="closebtn">&times;</span> 
+  <strong>You already voted !</strong> you can only vote once per session.
+</div>
 
 <h2>Contact Me</h2>
-<p class="contact-info">📞 <a href="tel:+123456789" class="contact-link">+123456789</a>
-📧 <a href="mailto:example@example.com" class="contact-link">example@example.com</a></p>
+<p class="contact-info">📞 <a class="contact-link">+33 7 44 82 77 85</a>
+📧 <a href="mailto:youness.chetouan9@gmail.com" class="contact-link">youness.chetouan9@gmail.com</a></p>
 
-    <h3>Chat</h3>
+    <h3>Or leave a public message</h3>
     <div class="chat-container">
         <?php
         if ($messagesResult->num_rows > 0) {
@@ -89,8 +115,8 @@
     <h3>Do you like this website?</h3>
     <div class="poll">
         <form action="?page=Contact" method="post">
-            <button type="submit" name="vote" value="yes" class="yes-btn" >Yes</button>
-            <button type="submit" name="vote" value="no" class="no-btn" id="no-button" >No</button>
+            <button type="submit" name="vote" value="yes" class="yes-btn">Yes</button>
+            <button type="submit" name="vote" value="no" class="no-btn" id="no-button" style="position: absolute; z-index: 1200;" >No</button>
         </form>
         <p>Yes: <?= $yesPercent ?>% (<?= $pollResult["yes_votes"] ?> votes)</p>
         <p>No: <?= $noPercent ?>% (<?= $pollResult["no_votes"] ?> votes)</p>
@@ -99,7 +125,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const noBtn = document.getElementById("no-button");
-            let escapeSpeed = 20;
+            let escapeSpeed = 30;
             
             document.addEventListener("mousemove", function(event) {
                 const rect = noBtn.getBoundingClientRect();
@@ -109,7 +135,7 @@
                 const btnY = rect.top + rect.height / 2;
                 const distance = Math.hypot(mouseX - btnX, mouseY - btnY);
                 
-                if (distance < 100) {
+                if (distance < 50) {
                     let newX = rect.left + (mouseX < btnX ? escapeSpeed : -escapeSpeed);
                     let newY = rect.top + (mouseY < btnY ? escapeSpeed : -escapeSpeed);
                     
@@ -121,6 +147,19 @@
                 }
             });
         });
+    </script>
+
+    <script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+    }
     </script>
 
 </section>

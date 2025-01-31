@@ -524,6 +524,8 @@ h2, h3 {
 .no-btn {
   background-color: #dc3545;
   color: white;
+  position: absolute;
+  z-index: 1200;
 }
 .no-btn:hover {
   background-color: #c82333;
@@ -532,14 +534,30 @@ h2, h3 {
 .username{
   color: teal;
 }
-.alert-danger{color:#a94442;background-color:#f2dede;border-color:#ebccd1}
-.alert-danger hr{border-top-color:#e4b9c0}
-.alert-danger .alert-link{color:#843534}
-.alert-success{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6}
-.alert-success hr{border-top-color:#c9e2b3}
-.alert-success .alert-link{color:#2b542c}
-.alert-danger{color:#a94442;background-color:#f2dede;border-color:#ebccd1}
-.alert-danger hr{border-top-color:#e4b9c0}
-.alert-danger .alert-link{color:#843534}
-.alert-success{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6}
-.alert-success hr{border-top-color:#c9e2b3}.alert-success .alert-link{color:#2b542c}
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
