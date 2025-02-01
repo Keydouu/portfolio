@@ -1,4 +1,4 @@
-<section id="contact"></br></br>
+<section id="contact" style="position: relative;"></br></br>
 
 <?php
     session_start();
@@ -86,6 +86,8 @@
 📧 <a href="mailto:youness.chetouan9@gmail.com" class="contact-link">youness.chetouan9@gmail.com</a></p>
 
     <h3>Or leave a public message</h3>
+    <img src="./assets/images/bocchi.png" id="Bocchi" alt="my favorite character"
+        style="top : 75px; right: -25px; position: absolute; max-height:250px;">
     <div class="chat-container">
         <?php
         if ($messagesResult->num_rows > 0) {
@@ -116,50 +118,9 @@
     <div class="poll">
         <form action="?page=Contact" method="post">
             <button type="submit" name="vote" value="yes" class="yes-btn">Yes</button>
-            <button type="submit" name="vote" value="no" class="no-btn" id="no-button" style="position: absolute; z-index: 1200;" >No</button>
+            <button type="submit" name="vote" value="no" class="no-btn" id="no-button" >No</button>
         </form>
         <p>Yes: <?= $yesPercent ?>% (<?= $pollResult["yes_votes"] ?> votes)</p>
         <p>No: <?= $noPercent ?>% (<?= $pollResult["no_votes"] ?> votes)</p>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const noBtn = document.getElementById("no-button");
-            let escapeSpeed = 30;
-            
-            document.addEventListener("mousemove", function(event) {
-                const rect = noBtn.getBoundingClientRect();
-                const mouseX = event.clientX;
-                const mouseY = event.clientY;
-                const btnX = rect.left + rect.width / 2;
-                const btnY = rect.top + rect.height / 2;
-                const distance = Math.hypot(mouseX - btnX, mouseY - btnY);
-                
-                if (distance < 50) {
-                    let newX = rect.left + (mouseX < btnX ? escapeSpeed : -escapeSpeed);
-                    let newY = rect.top + (mouseY < btnY ? escapeSpeed : -escapeSpeed);
-                    
-                    newX = Math.max(0, Math.min(window.innerWidth - rect.width, newX));
-                    newY = Math.max(0, Math.min(window.innerHeight - rect.height, newY));
-                    
-                    noBtn.style.left = newX + "px";
-                    noBtn.style.top = newY + "px";
-                }
-            });
-        });
-    </script>
-
-    <script>
-    var close = document.getElementsByClassName("closebtn");
-    var i;
-
-    for (i = 0; i < close.length; i++) {
-    close[i].onclick = function(){
-        var div = this.parentElement;
-        div.style.opacity = "0";
-        setTimeout(function(){ div.style.display = "none"; }, 600);
-    }
-    }
-    </script>
-
 </section>

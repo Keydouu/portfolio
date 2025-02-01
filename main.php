@@ -1,5 +1,5 @@
 <?php
-  $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+  $page = isset($_GET['page']) ? $_GET['page'] : 'Home';
   include "nav.php";
 ?>
 <!DOCTYPE html>
@@ -18,10 +18,10 @@
         if (in_array($page, $allowed_pages)) {
             include "$page.php";
         } else {
-            include "Home.php";
+            $page="Home";
         }
     ?>
-    <footer>
+    <!--footer>
       <!--nav>aaa
         <div class="nav-links-container">
           <ul class="nav-linka&&&zaas">
@@ -33,10 +33,11 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-      </nav-->
+      </nav>
       <p>Explore 🌍, Create ✨, Achieve 💻</p>
-    </footer>
+    </footer-->
     <script src="script.js"></script>
+    <script src= <?php echo $page.'.js';?> ></script> 
 <!--a-->
 </body>
 </html>
