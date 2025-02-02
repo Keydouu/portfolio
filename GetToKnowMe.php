@@ -1,5 +1,56 @@
-<section id="about">
-    <h1 class="title">Introduction</h1>
+<div style="height: 10vh;"></div>
+<section> 
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Meee')" id="defaultOpen">Who I am</button>
+            <?php 
+                $tabs_ids = ['Diplomes', 'Experience', 'Technologies', 'Inspirations', 'Loisirs'];
+                $tabs_titles = ['Diplomes', 'Experience', 'Technologies', 'Inspirations Professionnelles', 'Loisirs'];
+                for ($x = 0; $x < sizeof($tabs_ids); $x++) {
+                    $id = $tabs_ids[$x];
+                    $title = $tabs_titles[$x];
+                    echo "<button class=\"tablinks\" onclick=\"openCity(event, '$id')\">$title</button>";
+                }
+            ?>
+        </div>
+        <div id="Meee" class="tabcontent">
+            <h3>Youness</h3>
+            <p>The very best.</p>
+        </div>
+
+        <div id="Diplomes" class="tabcontent">
+            <h3>Master</h3>
+            <p>Another one.</p> 
+        </div>
+
+        <div id="Experience" class="tabcontent">
+            <h3>Stage</h3>
+            <p>& stage & stage.</p>
+        </div>
+        <div id="Technologies" class="tabcontent about-containers">
+            <div class="details-container" style="width: 48%;">
+                <h2 class="experience-sub-title">Frontend Development</h2>
+                <div class="article-container" id="frontend-experience">
+                    <!-- JavaScript will populate this section -->
+                </div>
+            </div>
+
+            <!-- Backend Development -->
+            <div class="details-container" style="width: 48%;">
+                <h2 class="experience-sub-title">Backend Development</h2>
+                <div class="article-container" id="backend-experience">
+                    <!-- JavaScript will populate this section -->
+                </div>
+            </div>
+        </div>
+        <div id="Inspirations" class="tabcontent">
+            <h3>I have a dream.</h3>
+            <p>to become rich.</p>
+        </div>
+        <div id="Loisirs" class="tabcontent">
+            <h3>Yahooo</h3>
+            <p>Basketball chess bocchi</p>
+        </div>
+    <!--h1 class="title">Introduction</h1>
     <div class="section-container">
         <div class="section__pic-container">
             <img src="assets/images/map.png" alt="internships_map" class="about-pic" style="height: 100%;">
@@ -8,7 +59,7 @@
 
             <div class="about-containers">
                 <div class="details-container">
-                    <!--img src="./assets/experience.png" alt="Experience icon" class="icon"aaaaaa-->
+                    <!--img src="./assets/experience.png" alt="Experience icon" class="icon"aaaaaa>
                     <h3>Stages</h3>
                     <table class="invisible-table">
                         <tr>
@@ -30,7 +81,7 @@
                 </div>
 
                 <div class="details-container">
-                    <!--img src="./assets/education.png" alt="Education icon" class="icon"-->
+                    <!--img src="./assets/education.png" alt="Education icon" class="icon">
                     <h3>Education</h3>
                     <table class="invisible-table">
                         <tr>
@@ -58,5 +109,5 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div-->
 </section>

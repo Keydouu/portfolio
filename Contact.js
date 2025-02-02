@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+const bocchi = document.getElementById("Bocchi");
+
 var close = document.getElementsByClassName("closebtn");
 var i;
 
@@ -31,5 +33,7 @@ for (i = 0; i < close.length; i++) {
         var div = this.parentElement;
         div.style.opacity = "0";
         setTimeout(function(){ div.style.display = "none"; }, 600);
+        bocchi.style.top= "75px"; 
+        bocchi.style.right= -"25px";
     }
 }
