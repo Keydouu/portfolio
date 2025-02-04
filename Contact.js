@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const noBtn = document.getElementById("no-button");
-    let escapeSpeed = 30;
+    let escapeSpeed = 10;
     
     document.addEventListener("mousemove", function(event) {
         const rect = noBtn.getBoundingClientRect();

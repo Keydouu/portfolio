@@ -570,6 +570,7 @@ h2 {
   background-color: white;
   width: 20%;
   height: 300px;
+  border-right: 1px solid #ccc;
 }
 
 .tab button {
@@ -587,23 +588,55 @@ h2 {
   font-size: 17px;
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
   background-color: teal;
   color: white;
 }
 
-/* Create an active/current "tab button" class */
 .tab button.active {
   background-color: black;
   color: white;
 }
 
-/* Style the tab content */
 .tabcontent {
   float: left;
   padding: 0px 12px;
   border-left: 1px solid #ccc;
   width: 75%;
   height: 300px;
+}
+
+.experience-vertical, .experience-horizontal {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.experience-vertical{
+  flex-direction: row;
+}
+.experience-section {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.experience-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.experience-logo {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+.experience-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px black;
 }

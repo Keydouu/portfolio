@@ -50,7 +50,7 @@
         <p>Optimisation d’un solveur de planification en utilisant des techniques d’IA et des heuristiques avancées.</p>
 
         <h4>🔹 Stage @ Eurafrique Information (2023 - 6 mois)</h4>
-        <p>Développement d’une plateforme de <strong>signature électronique sécurisée</strong> conforme aux normes de cryptographie et de confidentialité.</p>
+        <p>Développement d’une plateforme de <strong>signature électronique sécurisée</strong> conforme aux normes européenne de cryptographie et de confidentialité.</p>
 
         <h4>🔹 Stage @ NTT DATA (2022 - 6 mois)</h4>
         <p>Conception et implémentation d’une plateforme de gestion des candidats pour le recrutement, avec intégration de workflows automatisés.</p>
