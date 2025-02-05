@@ -60,13 +60,44 @@
 
     <div id="Technologies" class="tabcontent">
         <h3>Technologies & Outils</h3>
-        <ul>
-            <li><strong>Langages :</strong> Java, Kotlin, Python, C/C++, TypeScript, JavaScript.</li>
-            <li><strong>Bases de données :</strong> MySQL, PostgreSQL, MongoDB.</li>
-            <li><strong>Frameworks :</strong> Spring Boot, Angular, Hibernate, Kafka.</li>
-            <li><strong>DevOps :</strong> Docker, AWS, Git, CI/CD.</li>
-            <li><strong>Modélisation :</strong> UML, BPMN, Merise.</li>
-        </ul>
+        <table class="hidden-border-table">
+            <tr>
+                <td>🌌<strong>Langages :</strong></td>
+                <td>Java</td>
+                <td>Kotlin</td>
+                <td>Python</td>
+                <td>C/C++</td>
+                <td>TypeScript</td>
+                <td>JavaScript</td>
+            </tr>
+            <tr>
+                <td>✨<strong>Bases de données :</strong></td>
+                <td>MySQL</td>
+                <td>PostgreSQL</td>
+                <td>MongoDB</td>
+            </tr>
+            <tr>
+                <td>💫<strong>Frameworks :</strong></td>
+                <td>Spring Boot</td>
+                <td>Angular</td>
+                <td>Hibernate</td>
+                <td>Kafka</td>
+            </tr>
+            <tr>
+                <td>🌠<strong>DevOps :</strong></td>
+                <td>Docker</td>
+                <td>AWS</td>
+                <td>Git</td>
+                <td>CI/CD</td>
+            </tr>
+            <tr>
+                <td>🌟<strong>Modélisation :</strong></td>
+                <td>UML</td>
+                <td>BPMN</td>
+                <td>Merise</td>
+            </tr>
+        </table>
+        </br>
     </div>
 
     <div id="Aspirations" class="tabcontent">

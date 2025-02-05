@@ -13,7 +13,16 @@ function openCity(evt, cityName) {
 }
 document.getElementById("defaultOpen").click();
 
-document.addEventListener("DOMContentLoaded", function() {
+function equalizeHeights() {
+  let elements = document.querySelectorAll(".tab, .tabcontent");
+  let maxHeight = Math.max(...Array.from(elements, el => el.offsetHeight));
+  elements.forEach(el => el.style.Height = maxHeight + "px");
+}
+
+window.onload = equalizeHeights;
+window.onresize = equalizeHeights;
+
+/*document.addEventListener("DOMContentLoaded", function() {
     const frontendSkills = [
       "HTML / CSS / Js", "Angular"
     ];
@@ -48,5 +57,5 @@ document.addEventListener("DOMContentLoaded", function() {
     populateSkills(frontendSkills, frontendIcons, frontendContainer);
     populateSkills(backendSkills, backendIcons, backendContainer);
     //populateSkills(aiSkills, aiIcons, aiContainer);
-  });
+  });*/
   
