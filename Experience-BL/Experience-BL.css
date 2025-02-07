@@ -24,7 +24,6 @@ body {
     align-items: center;
     font-size: 16px;
     font-weight: bold;
-    background-color: white;
     text-align: justify;
 }
 .controls {
@@ -45,4 +44,18 @@ body {
 }
 .button:hover {
     background: black;
+}
+.textHolder{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius:25px;
+    display: flex;
+    flex-direction:column;
+}
+img,
+canvas {
+  margin: auto;
 }
