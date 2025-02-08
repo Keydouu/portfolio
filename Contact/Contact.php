@@ -1,4 +1,3 @@
-<section id="contact" style="position: relative;"></br></br>
 
 <?php
     session_start();
@@ -80,7 +79,7 @@
   <span class="closebtn">&times;</span> 
   <strong>You already voted !</strong> you can only vote once per session.
 </div>
-
+<section id="contact" style="position: relative;">
 <h2>Contact Me</h2>
 <p class="contact-info">📞 <a class="contact-link">+33 7 44 82 77 85</a>
 📧 <a href="mailto:youness.chetouan9@gmail.com" class="contact-link">youness.chetouan9@gmail.com</a></p>

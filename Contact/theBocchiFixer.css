@@ -1,5 +1,10 @@
 
-
+body {
+  margin: 0;
+  padding-top: 10vh;
+  height: 90vh;
+  overflow: hidden;
+}
 #contact {
   display: flex;
   justify-content: center;
@@ -48,6 +53,7 @@
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    text-shadow: 2px 2px 5px white;
   }
   .contact-link:hover {
     color: rgb(0, 100, 100);
@@ -171,4 +177,6 @@
   .closebtn:hover {
     color: black;
   }
-  
+  h2, h3{
+    text-shadow: 2px 2px 5px white;
+  }

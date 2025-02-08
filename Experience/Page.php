@@ -1,6 +1,6 @@
 <div style="height: 8vh;"></div>
 <div class="experience-vertical">
-    <div class="experience-section" style="background-image: url('assets/images/toulouse.jpg');">
+    <div class="experience-section" style="background-image: url('assets/images/toulouse.jpg');" onclick="location.href='?page=Experience-BL';">
         <div class="experience-content">
             <div class="experience-text">2024</div>
             <a href="?page=Experience-BL"><img src="assets\icons\berger-levrault-logo.png" alt="Logo" class="experience-logo"></a>
