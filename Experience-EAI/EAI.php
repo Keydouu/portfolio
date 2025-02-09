@@ -1,0 +1,75 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<div class="slideshow-container">
+    <div class="slides" id="slides">
+        <div class="slide">
+            <br>
+            <div class="textHolder">
+                <h2>Contexte</h2>
+                <p>Le projet vise à implémenter une solution de signature digitale sécurisée en ligne, marquant ainsi la première mise en place de ce service par un prestataire privé au Maroc. Cette solution permettra de répondre aux besoins croissants de dématérialisation et de sécurisation des échanges de documents officiels.</p>
+                <p><strong>Les objectifs principaux du projet sont :</strong></p>
+                <ul>
+                    <li><strong>Génération de certificats numériques</strong> : Fournir aux utilisateurs des certificats X.509 conformes aux normes internationales pour garantir l’authenticité des signatures.</li>
+                    <li><strong>Signature de documents</strong> : Permettre aux utilisateurs de signer électroniquement leurs documents ou d’envoyer des demandes de signature à d’autres parties.</li>
+                    <li><strong>Vérification de la validité d’un document signé</strong> : Offrir un service permettant de vérifier l’authenticité et l’intégrité d’un document signé via un système de jetons de vérification.</li>
+                    <li><strong>Conformité légale</strong> : Assurer que toutes les transactions respectent la loi marocaine 43-20 et, en l’absence de précisions locales, s’appuyer sur les réglementations européennes en vigueur.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide">
+            <br>
+            <div class="textHolder">
+                <h2>Modélisation</h2>
+                <p><strong>L’application offre plusieurs fonctionnalités accessibles aux utilisateurs :</strong></p>
+                <ul>
+                    <li><strong>Connexion et authentification</strong> : L’utilisateur doit créer un compte via un rendez-vous avec un agent de l’entreprise, qui effectuera une vérification d’identité. Une fois le compte validé, l’utilisateur peut se connecter avec des identifiants sécurisés.</li>
+                    <li><strong>Acquisition et gestion de certificats</strong> : L’utilisateur peut acheter un certificat numérique s’il n’en possède pas. Une fois acquis, le certificat est stocké en toute sécurité et utilisable pour signer des documents.</li>
+                    <li><strong>Signature de documents</strong> : L’utilisateur peut signer un document en saisissant deux codes d’authentification envoyés séparément par SMS et e-mail. Il peut également envoyer une demande à un autre utilisateur pour qu’il signe un document.</li>
+                    <li><strong>Vérification de documents signés</strong> : L’utilisateur doit acheter des jetons de vérification. En utilisant ses jetons, il peut vérifier l’authenticité d’un document signé. Un rapport PDF légal est généré pour attester de la validité du document, signé numériquement par l’entreprise pour garantir son authenticité.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide">
+            <br>
+            <div class="textHolder">
+                <h2>Contribution</h2>
+                <h3><strong>Technologies utilisées :</strong></h3>
+                <ul>
+                    <li><strong>Backend</strong> : API en <strong>Java Spring Boot</strong> pour la gestion des utilisateurs, des certificats et des signatures.</li>
+                    <li><strong>Frontend</strong> : Interface utilisateur développée en <strong>Angular</strong> pour une expérience fluide et sécurisée.</li>
+                    <li><strong>Bibliothèques de signature numérique</strong> :
+                        <ul>
+                            <li><strong>Bouncy Castle</strong> pour la génération et la gestion des certificats X.509.</li>
+                            <li><strong>DSS (Digital Signature Service)</strong> pour la signature et la validation des documents.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3><strong>Tâches réalisées :</strong></h3>
+                <ul>
+                    <li>Génération de certificats numériques X.509 conformes aux standards de l’authentification électronique.</li>
+                    <li>Mise en place d’un système de signature électronique sécurisée avec double authentification.</li>
+                    <li>Développement d’un module de vérification de certificats et de documents signés.</li>
+                    <li>Génération de rapports PDF attestant de la validité des signatures.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide">
+            <br>
+            <div class="textHolder">
+                <h2>Résultats</h2>
+                <p>En raison d’un accord de confidentialité, le résultats du projet ne peuvent être partagés intégralement. Toutefois, il est possible de mentionner que :</p>
+                <ul>
+                    <li>Le projet a été officiellement nommé <strong>AfricTrust</strong>.</li>
+                    <li>Une interface fonctionnelle et sécurisée a été mise en place pour permettre aux utilisateurs de signer et vérifier leurs documents en toute confiance.</li>
+                    <li>Le service est disponible en ligne et peut être consulté à l’adresse suivante : <a href="#">[lien à insérer]</a>.</li>
+                    <li>Deux captures d’écran d’un rapport de validation sont jointes en annexe pour illustrer le fonctionnement du système.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="controls">
+        <button class="button" id="ttsButton" onclick="toggleSpeech()">🔊</button>
+        <button class="button" onclick="prevSlide()">&#8592;</button>
+        <button class="button" onclick="nextSlide()">&#8594;</button>
+    </div>
+</div>

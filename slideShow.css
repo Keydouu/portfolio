@@ -56,6 +56,6 @@ body {
     flex-direction:column;
 }
 img,
-canvas {
+canvas, video {
   margin: auto;
 }

@@ -3,7 +3,8 @@
   include "nav.php";
   if (is_dir($page)) {
     $files = scandir($page);
-
+    if (str_starts_with($page, "Experience-"))
+        $css_files[] = "slideShow.css";
     foreach ($files as $file) {
         if ($file !== '.' && $file !== '..') {
             $ext = pathinfo($file, PATHINFO_EXTENSION);
@@ -16,6 +17,7 @@
             } elseif ($ext === 'js') {
                 $js_files[] = "$page/$file";
             }
+            
         }
     }
 }
