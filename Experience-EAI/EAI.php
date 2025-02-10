@@ -3,7 +3,7 @@
     <div class="slides" id="slides">
         <div class="slide">
             <br>
-            <div class="textHolder">
+            <div class="textHolder" id="txt1">
                 <h2>Contexte</h2>
                 <p>Le projet vise à implémenter une solution de signature digitale sécurisée en ligne, marquant ainsi la première mise en place de ce service par un prestataire privé au Maroc. Cette solution permettra de répondre aux besoins croissants de dématérialisation et de sécurisation des échanges de documents officiels.</p>
                 <p><strong>Les objectifs principaux du projet sont :</strong></p>
@@ -17,7 +17,7 @@
         </div>
         <div class="slide">
             <br>
-            <div class="textHolder">
+            <div class="textHolder" id="txt2">
                 <h2>Modélisation</h2>
                 <p><strong>L’application offre plusieurs fonctionnalités accessibles aux utilisateurs :</strong></p>
                 <ul>
@@ -30,7 +30,7 @@
         </div>
         <div class="slide">
             <br>
-            <div class="textHolder">
+            <div class="textHolder" id="txt3">
                 <h2>Contribution</h2>
                 <h3><strong>Technologies utilisées :</strong></h3>
                 <ul>
@@ -55,7 +55,7 @@
         </div>
         <div class="slide">
             <br>
-            <div class="textHolder">
+            <div class="textHolder" id="txt4">
                 <h2>Résultats</h2>
                 <p>En raison d’un accord de confidentialité, le résultats du projet ne peuvent être partagés intégralement. Toutefois, il est possible de mentionner que :</p>
                 <ul>

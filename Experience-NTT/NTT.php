@@ -3,7 +3,7 @@
     <div class="slides" id="slides">
         <div class="slide">
             <br>
-            <div class="textHolder">
+            <div class="textHolder" id="txt1">
                 <h2>Contexte</h2>
                 <p>Le projet vise à développer une plateforme numérique dédiée à la gestion efficace des processus de recrutement. Il permet aux entreprises de centraliser et d'automatiser plusieurs tâches liées à l'embauche de nouveaux talents, évitant ainsi l'utilisation d'outils non adaptés comme les feuilles Excel.</p>
                 <p><strong>Les objectifs principaux du projet sont :</strong></p>
@@ -21,7 +21,7 @@
         </div>
         <div class="slide">
             <br>
-            <div class="textHolder">
+            <div class="textHolder" id="txt2">
                 <h2>Réalisation</h2>
                 <h3><strong>Technologies utilisées :</strong></h3>
                 <ul>
@@ -41,7 +41,7 @@
         </div>
         <div class="slide">
             <br>
-            <div class="textHolder">
+            <div class="textHolder" id="txt3">
                 <h2>Résultats</h2>
                 <video width="1152" height="720" controls>
                     <source src="assets\videos\ntt_demo.mp4" type="video/mp4">
